@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Box } from "@mantine/core";
+import useSWR from "swr";
+import AddTodo from "./components/AddTodo";
+
+export const API_URL = "http://localhost:5000/api/";
+export interface Todo {
+  id: number;
+  title: string;
+  body: string;
+  done: boolean;
+}
+
+const fetcher = (url: string) =>
+  fetch(`${API_URL}${url}`).then((res) => res.json());
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { data, mutate } = useSWR<Todo[]>("todos", fetcher);
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Box>
+          {JSON.stringify(data)}
+          <AddTodo mutate={mutate} />
+        </Box>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
