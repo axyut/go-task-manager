@@ -1,16 +1,22 @@
-# Task Manager App (Go)
+# Go APIs
 
 ## Description
 
-This is a simple task manager app written in Go. It uses a REST API to communicate with a MongoDB database. The app is built using the Fiber web framework. Frontend is built using React and Vite using Typescript.
+Repo contains APIs written in Go. Some are built using Fiber and some are built from scratch with net/http. Each folders contains a README.md file with instructions on how to run and interact with the API.
 
-## Commands used for Go
+## Commands to get started
 
 ```bash
 go mod init github.com/username/repo
 go get -u github.com/gofiber/fiber/v2
 go get -u go.mongodb.org/mongo-driver/mongo
 go get -u github.com/gofiber/fiber/v2/middleware/cors
-npm create vite client -- --template react-ts
-
 ```
+
+## Run the app
+
+```bash
+go run main.go
+```
+
+![Server](assets/server.png)
