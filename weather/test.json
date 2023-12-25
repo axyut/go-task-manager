@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "Narayanghat",
+    "region": "",
+    "country": "Nepal",
+    "lat": 27.68,
+    "lon": 84.42,
+    "tz_id": "Asia/Kathmandu",
+    "localtime_epoch": 1703416254,
+    "localtime": "2023-12-24 16:55"
+  },
+  "current": {
+    "last_updated_epoch": 1703415600,
+    "last_updated": "2023-12-24 16:45",
+    "temp_c": 21.3,
+    "temp_f": 70.4,
+    "is_day": 1,
+    "condition": {
+      "text": "Sunny",
+      "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+      "code": 1000
+    },
+    "wind_mph": 2.2,
+    "wind_kph": 3.6,
+    "wind_degree": 208,
+    "wind_dir": "SSW",
+    "pressure_mb": 1017.0,
+    "pressure_in": 30.02,
+    "precip_mm": 0.0,
+    "precip_in": 0.0,
+    "humidity": 44,
+    "cloud": 3,
+    "feelslike_c": 21.3,
+    "feelslike_f": 70.4,
+    "vis_km": 10.0,
+    "vis_miles": 6.0,
+    "uv": 6.0,
+    "gust_mph": 3.9,
+    "gust_kph": 6.3
+  }
+}
