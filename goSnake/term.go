@@ -17,8 +17,8 @@ func hideCursor() {
 func showCursor() {
 	fmt.Fprint(screen, "\033[?25h")
 }
-func moveCursor(pos map[string]int) {
-	fmt.Fprintf(screen, "\033[%d;%dH", pos["height"], pos["width"])
+func moveCursor(pos [2]int) {
+	fmt.Fprintf(screen, "\033[%d;%dH", pos[1], pos[0])
 }
 
 func clear() {
