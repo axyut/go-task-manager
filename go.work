@@ -6,4 +6,5 @@ use (
 	./weather
 	./goSnake
 	./url_shortner
+	./template_go_templ_htmx
 )
